@@ -3,6 +3,7 @@ import { AfterViewInit, Component, Input, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
 import { LayoutService } from '../../../../@core/utils';
 import { OutlineData } from '../../../../@core/data/visitors-analytics';
+import { graphic } from 'echarts';
 
 @Component({
   selector: 'ngx-visitors-analytics-chart',
@@ -152,7 +153,7 @@ export class ECommerceVisitorsAnalyticsChartComponent implements AfterViewInit, 
         normal: {
           width: eTheme.lineWidth,
           type: eTheme.lineStyle,
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+          color: new graphic.LinearGradient(0, 0, 0, 1, [{
             offset: 0,
             color: eTheme.lineGradFrom,
           }, {
@@ -166,7 +167,7 @@ export class ECommerceVisitorsAnalyticsChartComponent implements AfterViewInit, 
       },
       areaStyle: {
         normal: {
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+          color: new graphic.LinearGradient(0, 0, 0, 1, [{
             offset: 0,
             color: eTheme.areaGradFrom,
           }, {
@@ -200,12 +201,12 @@ export class ECommerceVisitorsAnalyticsChartComponent implements AfterViewInit, 
         normal: {
           width: eTheme.innerLineWidth,
           type: eTheme.innerLineStyle,
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1),
+          color: new graphic.LinearGradient(0, 0, 0, 1),
         },
       },
       areaStyle: {
         normal: {
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+          color: new graphic.LinearGradient(0, 0, 0, 1, [{
             offset: 0,
             color: eTheme.innerAreaGradFrom,
           }, {

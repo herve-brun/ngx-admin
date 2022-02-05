@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, EventEmitter, Input, OnDestroy, Output } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
+import { graphic } from 'echarts';
 import { delay, takeWhile } from 'rxjs/operators';
 
 @Component({
@@ -106,7 +107,7 @@ export class EarningPieChartComponent implements AfterViewInit, OnDestroy {
               },
               itemStyle: {
                 normal: {
-                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                  color: new graphic.LinearGradient(0, 0, 0, 1, [
                     {
                       offset: 0,
                       color: earningPie.firstPieGradientLeft,
@@ -143,7 +144,7 @@ export class EarningPieChartComponent implements AfterViewInit, OnDestroy {
               },
               itemStyle: {
                 normal: {
-                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                  color: new graphic.LinearGradient(0, 0, 0, 1, [
                     {
                       offset: 0,
                       color: earningPie.secondPieGradientLeft,
@@ -180,7 +181,7 @@ export class EarningPieChartComponent implements AfterViewInit, OnDestroy {
               },
               itemStyle: {
                 normal: {
-                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                  color: new graphic.LinearGradient(0, 0, 0, 1, [
                     {
                       offset: 0,
                       color: earningPie.thirdPieGradientLeft,

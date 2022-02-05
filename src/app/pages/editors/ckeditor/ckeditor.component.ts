@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-
-import './ckeditor.loader';
-import 'ckeditor';
+import * as Editor from '@ckeditor/ckeditor5-build-inline';
 
 @Component({
   selector: 'ngx-ckeditor',
@@ -11,10 +9,11 @@ import 'ckeditor';
         CKEditor
       </nb-card-header>
       <nb-card-body>
-        <ckeditor [config]="{ extraPlugins: 'divarea', height: '320' }"></ckeditor>
+        <ckeditor [editor]="ClassicEditor" [config]="{ height: '320' }"></ckeditor>
       </nb-card-body>
     </nb-card>
   `,
 })
 export class CKEditorComponent {
+  public ClassicEditor = Editor;
 }

@@ -2,6 +2,7 @@ import { delay, takeWhile } from 'rxjs/operators';
 import { AfterViewInit, Component, Input, OnChanges, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
 import { LayoutService } from '../../../../@core/utils/layout.service';
+import { graphic } from 'echarts';
 
 @Component({
   selector: 'ngx-earning-live-update-chart',
@@ -123,7 +124,7 @@ export class EarningLiveUpdateChartComponent implements AfterViewInit, OnDestroy
           },
           areaStyle: {
             normal: {
-              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              color: new graphic.LinearGradient(0, 0, 0, 1, [{
                 offset: 0,
                 color: earningLineTheme.gradFrom,
               }, {

@@ -13,7 +13,14 @@ import { MapsRoutingModule, routedComponents } from './maps-routing.module';
     GoogleMapsModule,
     LeafletModule.forRoot(),
     MapsRoutingModule,
-    NgxEchartsModule,
+    NgxEchartsModule.forRoot({
+      /**
+       * This will import all modules from echarts.
+       * If you only need custom modules,
+       * please refer to [Custom Build] section.
+       */
+      echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
+    }),
     NbCardModule,
   ],
   exports: [],

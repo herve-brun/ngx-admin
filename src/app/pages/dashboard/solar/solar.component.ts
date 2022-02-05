@@ -1,6 +1,7 @@
 import { delay } from 'rxjs/operators';
 import { AfterViewInit, Component, Input, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
+import { graphic } from 'echarts';
 
 declare const echarts: any;
 
@@ -81,7 +82,7 @@ export class SolarComponent implements AfterViewInit, OnDestroy {
                 },
                 itemStyle: {
                   normal: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    color: new graphic.LinearGradient(0, 0, 0, 1, [
                       {
                         offset: 0,
                         color: solarTheme.gradientLeft,
@@ -140,7 +141,7 @@ export class SolarComponent implements AfterViewInit, OnDestroy {
                 },
                 itemStyle: {
                   normal: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                    color: new graphic.LinearGradient(0, 0, 0, 1, [
                       {
                         offset: 0,
                         color: solarTheme.gradientLeft,

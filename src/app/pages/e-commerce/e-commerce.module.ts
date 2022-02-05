@@ -20,7 +20,6 @@ import { OrdersChartComponent } from './charts-panel/charts/orders-chart.compone
 import { ProfitChartComponent } from './charts-panel/charts/profit-chart.component';
 import { ChartPanelHeaderComponent } from './charts-panel/chart-panel-header/chart-panel-header.component';
 import { ChartPanelSummaryComponent } from './charts-panel/chart-panel-summary/chart-panel-summary.component';
-import { ChartModule } from 'angular2-chartjs';
 import { StatsCardBackComponent } from './profit-card/back-side/stats-card-back.component';
 import { StatsAreaChartComponent } from './profit-card/back-side/stats-area-chart.component';
 import { StatsBarAnimationChartComponent } from './profit-card/front-side/stats-bar-animation-chart.component';
@@ -55,6 +54,7 @@ import { EarningCardBackComponent } from './earning-card/back-side/earning-card-
 import { EarningPieChartComponent } from './earning-card/back-side/earning-pie-chart.component';
 import { EarningCardFrontComponent } from './earning-card/front-side/earning-card-front.component';
 import { EarningLiveUpdateChartComponent } from './earning-card/front-side/earning-live-update-chart.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   imports: [
@@ -66,9 +66,16 @@ import { EarningLiveUpdateChartComponent } from './earning-card/front-side/earni
     NbTabsetModule,
     NbSelectModule,
     NbListModule,
-    ChartModule,
+    NgChartsModule,
     NbProgressBarModule,
-    NgxEchartsModule,
+    NgxEchartsModule.forRoot({
+      /**
+       * This will import all modules from echarts.
+       * If you only need custom modules,
+       * please refer to [Custom Build] section.
+       */
+      echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
+    }),
     NgxChartsModule,
     LeafletModule,
   ],

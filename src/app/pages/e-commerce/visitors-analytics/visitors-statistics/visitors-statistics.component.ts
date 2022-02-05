@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, Input, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
+import { graphic } from 'echarts';
 import { delay, takeWhile } from 'rxjs/operators';
 import { LayoutService } from '../../../../@core/utils/layout.service';
 
@@ -93,7 +94,7 @@ export class ECommerceVisitorsStatisticsComponent implements AfterViewInit, OnDe
               },
               itemStyle: {
                 normal: {
-                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                  color: new graphic.LinearGradient(0, 0, 0, 1, [
                     {
                       offset: 0,
                       color: visitorsPie.firstPieGradientLeft,
@@ -158,7 +159,7 @@ export class ECommerceVisitorsStatisticsComponent implements AfterViewInit, OnDe
               },
               itemStyle: {
                 normal: {
-                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1),
+                  color: new graphic.LinearGradient(0, 0, 0, 1),
                 },
               },
               hoverAnimation: false,
@@ -176,7 +177,7 @@ export class ECommerceVisitorsStatisticsComponent implements AfterViewInit, OnDe
               },
               itemStyle: {
                 normal: {
-                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                  color: new graphic.LinearGradient(0, 0, 0, 1, [
                     {
                       offset: 0,
                       color: visitorsPie.secondPieGradientLeft,

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { NbCardModule } from '@nebular/theme';
-import { CKEditorModule } from 'ng2-ckeditor';
 
 import { ThemeModule } from '../../@theme/theme.module';
 

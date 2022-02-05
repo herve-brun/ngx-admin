@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, Input, OnChanges, OnDestroy, SimpleChanges } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
+import { graphic } from 'echarts';
 import { takeWhile } from 'rxjs/operators';
 import { LayoutService } from '../../../../@core/utils/layout.service';
 
@@ -148,13 +149,16 @@ export class CountryOrdersChartComponent implements AfterViewInit, OnDestroy, On
               cursor: 'default',
               itemStyle: {
                 normal: {
-                  color: new echarts.graphic.LinearGradient(1, 0, 0, 0, [{
-                    offset: 0,
-                    color: countriesTheme.chartGradientFrom,
-                  }, {
-                    offset: 1,
-                    color: countriesTheme.chartGradientTo,
-                  }]),
+                  color: new graphic.LinearGradient(1, 0, 0, 0, [
+                    {
+                      offset: 0,
+                      color: countriesTheme.chartGradientFrom,
+                    },
+                    {
+                      offset: 1,
+                      color: countriesTheme.chartGradientTo,
+                    },
+                  ]),
                 },
               },
               z: 3,

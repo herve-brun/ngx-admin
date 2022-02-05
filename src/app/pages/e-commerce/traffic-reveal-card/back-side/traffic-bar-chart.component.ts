@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, Input, OnChanges, OnDestroy, SimpleChanges } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
+import { graphic } from 'echarts';
 import { takeWhile } from 'rxjs/operators';
 import { LayoutService } from '../../../../@core/utils/layout.service';
 
@@ -125,7 +126,7 @@ export class TrafficBarChartComponent implements AfterViewInit, OnDestroy, OnCha
               data: this.data,
               itemStyle: {
                 normal: {
-                  color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                  color: new graphic.LinearGradient(0, 0, 0, 1, [{
                     offset: 0,
                     color: trafficTheme.gradientFrom,
                   }, {

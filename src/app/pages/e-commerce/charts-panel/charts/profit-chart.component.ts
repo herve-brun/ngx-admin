@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, Input, OnChanges, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
+import { graphic } from 'echarts';
 import { takeWhile } from 'rxjs/operators';
 
 import { ProfitChart } from '../../../../@core/data/profit-chart';
@@ -110,7 +111,7 @@ export class ProfitChartComponent implements AfterViewInit, OnDestroy, OnChanges
           barWidth: '20%',
           itemStyle: {
             normal: {
-              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              color: new graphic.LinearGradient(0, 0, 0, 1, [{
                 offset: 0,
                 color: eTheme.firstLineGradFrom,
               }, {
@@ -127,7 +128,7 @@ export class ProfitChartComponent implements AfterViewInit, OnDestroy, OnChanges
           barWidth: '20%',
           itemStyle: {
             normal: {
-              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              color: new graphic.LinearGradient(0, 0, 0, 1, [{
                 offset: 0,
                 color: eTheme.secondLineGradFrom,
               }, {
@@ -144,7 +145,7 @@ export class ProfitChartComponent implements AfterViewInit, OnDestroy, OnChanges
           barWidth: '20%',
           itemStyle: {
             normal: {
-              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              color: new graphic.LinearGradient(0, 0, 0, 1, [{
                 offset: 0,
                 color: eTheme.thirdLineGradFrom,
               }, {
